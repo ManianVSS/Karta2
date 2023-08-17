@@ -1,0 +1,52 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.mvss</groupId>
+    <artifactId>karta2</artifactId>
+    <version>0.1.4</version>
+    <name>Karta</name>
+    <description>Karta Test Automation Framework</description>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>19</java.version>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <project.version>0.1.4</project.version>
+        <spring.boot.version>2.7.10</spring.boot.version>
+        <log4j2.version>2.17.1</log4j2.version>
+
+        <!-- While building can overwrite with -Ddistmgmt.repo.id=myrepoid -Ddistmgmt.repo.url=http://mynexus.url/path -->
+        <distmgmt.repo.id>github</distmgmt.repo.id>
+        <distmgmt.repo.name>GitHub ManianVSS Apache Maven Packages</distmgmt.repo.name>
+        <distmgmt.repo.url>https://maven.pkg.github.com/ManianVSS/Karta</distmgmt.repo.url>
+    </properties>
+
+    <modules>        
+        <module>framework</module>
+        <module>samples</module>        
+    </modules>
+<!-- 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>${distmgmt.repo.id}</id>
+            <name>${distmgmt.repo.name}</name>
+            <url>${distmgmt.repo.url}</url>
+        </repository>
+    </distributionManagement> -->
+
+</project>
